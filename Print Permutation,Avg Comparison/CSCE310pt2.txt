@@ -1,0 +1,23 @@
+CSCE 310 Homework 2
+
+Part 02:
+def findComparisonsAtDepth(n, depth=1):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return depth
+    else:
+        mid = n // 2
+        return findComparisonsAtDepth(mid, depth + 1) + \
+               findComparisonsAtDepth(n - mid - 1, depth + 1) + \
+               depth
+
+def averageComparisons(numbers):
+    n = len(numbers)
+    total_comparisons = findComparisonsAtDepth(n)
+    return round(total_comparisons / n if n > 0 else 0, 10)
+
+
+if __name__ == '__main__':
+    num = [11,21, 32, 37, 40, 51, 70,84, 87, 92, 97 ]
+    print("On average, " + str(averageComparisons(num)) + " comparisons will be required.")

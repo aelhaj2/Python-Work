@@ -1,0 +1,31 @@
+CSCE 310 Homework 2 
+
+Part 01:
+def printPermutations(word ,permutations):
+    if len(lst) == 0:
+        return[]
+    elif len(lst) == 1:
+        return [lst]
+    else:
+        l = []
+        for i in range (len(lst)):
+            x = lst[i]  
+            x = lst[i]              
+            xs = lst[:i] + lst[i+1:]    
+            for p in permutations(xs):
+                l.append([x]+p)
+                
+    
+    print('permutations')
+    p = 0
+    while p<permutations:
+        print(word)
+        p+=1
+    
+    return l
+
+
+if __name__ == '__main__':
+    num = int(input())
+    word = input()
+    printPermutations( word , num )
