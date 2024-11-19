@@ -1,6 +1,4 @@
-CSCE 310 Homework 2 
 
-Part 01:
 def printPermutations(word ,permutations):
     if len(lst) == 0:
         return[]
