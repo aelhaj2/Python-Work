@@ -1,6 +1,3 @@
-CSCE 310 Homework 2
-
-Part 02:
 def findComparisonsAtDepth(n, depth=1):
     if n == 0:
         return 0
